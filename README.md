@@ -166,7 +166,7 @@ Then, you need to make a web request to each of those URLs using Rest Client. Co
 def get_character_movies_from_api(character)
   #make the web request
   response_string = RestClient.get('http://www.swapi.co/api/people/')
-  response_hash = JSON.parse(all_characters)
+  response_hash = JSON.parse(response_string)
 
    # your code here
 end
