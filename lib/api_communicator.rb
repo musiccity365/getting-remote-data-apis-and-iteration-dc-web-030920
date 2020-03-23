@@ -3,11 +3,11 @@ require 'json'
 require 'pry'
 require 'awesome_print'
 
-# def turn_to_hash(link)
-#   ac = RestClient.get(link)
-#   rh = JSON.parse(ac)
-#   rh
-# end
+def turn_to_hash(link)
+  ac = RestClient.get(link)
+  rh = JSON.parse(ac)
+  rh
+end
 
 def get_character_movies_from_api(character_name)
   #make the web request
@@ -17,7 +17,6 @@ def get_character_movies_from_api(character_name)
   response_hash = JSON.parse(all_characters)
   response_hash = turn_to_hash('http://www.swapi.co/api/people/')
 
-  
   found_character = response_hash["results"].find {|character| character["name"].downcase == character_name }
  
   character_movies = found_character["films"]
@@ -55,6 +54,20 @@ def show_character_movies(character)
   films = get_character_movies_from_api(character)
   print_movies(films)
 end
+
+
+def get_movies_from_title(title)
+
+  response_hash = turn_to_hash('http://www.swapi.co/api/films/')
+
+  found_movie = response_hash["results"].find {|movie| movie["title"].downcase == title }
+
+  binding.pry 
+  found_movie 
+ 
+
+
+end 
 
 ## BONUS
 
