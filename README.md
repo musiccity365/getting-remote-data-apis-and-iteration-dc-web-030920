@@ -108,7 +108,7 @@ Once you've cloned down this project onto your computer, open it up and get fami
 
 Notice that we've provided you with a `bin` directory and a `lib` directory.
 
-The `bin` directory has one file, `run.rb`. This file is an *executable file*. That means that this is the file a user will run from the command line `ruby run.rb` to execute the program. Something like this:
+The `bin` directory has one file, `run.rb`. This file is an *executable file*. That means that this is the file a user will run from the command line `ruby bin/run.rb` to execute the program. Something like this:
 
 ![](http://readme-pics.s3.amazonaws.com/Apis-and-Iteration_Screen_Cap.gif)
 
