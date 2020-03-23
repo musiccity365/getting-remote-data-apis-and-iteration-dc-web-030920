@@ -23,6 +23,7 @@ def print_movies(films)
 end
 
 def show_character_movies(character)
+  puts "Searching for #{character}..."
   films = get_character_movies_from_api(character)
   print_movies(films)
 end
